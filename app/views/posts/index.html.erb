@@ -1,0 +1,9 @@
+<h1>Tom's image board</h1>
+<% @posts.each do |x| %>
+	<div class="col-md-4">
+		<a href="/posts/<%= x.id %>">
+		<%= image_tag x.image.url(:medium) %>
+		<br>
+		<%= x.description %>
+	</div>
+<% end %>
